@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Control – นโยบายความเป็นส่วนตัว / Privacy Policy</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #ffffff;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --line: #e5e7eb;
+        --accent: #0b6fd6;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #16181d;
+          --text: #e5e7eb;
+          --muted: #9ca3af;
+          --line: #2f343c;
+          --accent: #6cb6ff;
+        }
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font: 16px/1.7 system-ui, 'Segoe UI', 'Noto Sans Thai', sans-serif;
+      }
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 24px 16px 64px;
+      }
+      h1 { font-size: 1.7rem; margin-bottom: 4px; }
+      h2 { font-size: 1.15rem; margin-top: 28px; border-top: 1px solid var(--line); padding-top: 18px; }
+      nav a { color: var(--accent); margin-right: 16px; }
+      .muted { color: var(--muted); }
+      table { border-collapse: collapse; width: 100%; margin: 8px 0; }
+      th, td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; vertical-align: top; }
+      th { width: 34%; }
+      .todo { background: #fef3c7; color: #78350f; padding: 0 4px; border-radius: 3px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>AI Control</h1>
+      <p class="muted">ส่วนขยายเบราว์เซอร์ / Browser extension · มีผลตั้งแต่ / Effective 3 October 2026</p>
+      <nav><a href="#th">ภาษาไทย</a><a href="#en">English</a></nav>
+
+      <section id="th" lang="th">
+        <h2>นโยบายความเป็นส่วนตัว</h2>
+        <p>
+          AI Control เป็นส่วนขยายสำหรับอุปกรณ์ขององค์กร ใช้บังคับนโยบายการใช้งาน AI ขององค์กร
+          <span class="todo">&lt;ชื่อองค์กร&gt;</span> (“องค์กร”) โดยบล็อกบริการ AI ที่ผู้ดูแลระบบกำหนด
+          และแจ้งให้องค์กรทราบว่ามีการเข้าถึงบริการ AI ใดบ้าง องค์กรเป็นผู้ควบคุมข้อมูล
+          ผู้พัฒนาส่วนขยายไม่ได้รับข้อมูลใดๆ
+        </p>
+
+        <h2>ข้อมูลที่ส่งออกจากเบราว์เซอร์</h2>
+        <table>
+          <tr><th>ชื่อโฮสต์ของเว็บไซต์ (เช่น chatgpt.com)</th><td>เมื่อผู้ใช้เปิดหน้าเว็บของบริการ AI ที่องค์กรเฝ้าดู หรือเว็บที่ชื่อดูเหมือนบริการ AI ส่งเฉพาะ <strong>ชื่อโฮสต์</strong> พร้อมเวลา ว่าถูกบล็อกหรือไม่ และชื่อบริการ ไม่ส่ง URL เต็ม เส้นทาง พารามิเตอร์ ชื่อหน้า หรือเนื้อหาหน้า ส่งไม่เกินหนึ่งครั้งต่อโฮสต์ต่อหนึ่งนาที</td></tr>
+          <tr><th>อีเมลของบัญชี</th><td>เฉพาะเมื่อใช้งานแบบเชื่อมต่อเซิร์ฟเวอร์โดยตรง (ไม่มีโปรแกรม agent ขององค์กรบนเครื่อง) ส่วนขยายส่งอีเมลที่ผู้ดูแลระบบตั้งค่าไว้ หรืออีเมลของบัญชีเบราว์เซอร์ที่ลงชื่อเข้าใช้ (Chrome) เพื่อให้ทราบว่าต้องใช้นโยบายของผู้ใช้คนใด</td></tr>
+          <tr><th>รหัสอุปกรณ์</th><td>รหัสสุ่มที่สร้างตอนลงทะเบียนครั้งแรกกับเซิร์ฟเวอร์ขององค์กร และเวอร์ชันของส่วนขยาย เพื่อใช้ยืนยันตัวตนของส่วนขยายกับเซิร์ฟเวอร์</td></tr>
+        </table>
+
+        <h2>ข้อมูลที่ไม่เก็บ</h2>
+        <p>
+          ส่วนขยายไม่อ่านเนื้อหาหน้าเว็บ ไม่มี content script ไม่เก็บสิ่งที่ผู้ใช้พิมพ์
+          ข้อมูลในแบบฟอร์ม รหัสผ่าน คุกกี้ ประวัติการท่องเว็บทั่วไป หรือเว็บที่ไม่เกี่ยวกับบริการ AI
+          (เว็บเหล่านั้นถูกตรวจในเครื่องเพื่อเทียบกับรายการ และไม่ถูกส่งออก)
+        </p>
+
+        <h2>ข้อมูลที่เก็บในเครื่อง</h2>
+        <p>
+          ส่วนขยายเก็บในพื้นที่เก็บข้อมูลของเบราว์เซอร์บนเครื่องนี้เท่านั้น (ไม่ซิงก์ไปเครื่องอื่น):
+          รายการโดเมนที่องค์กรกำหนด ข้อความหน้าบล็อก สถานะที่แสดงในหน้าต่างเล็กของส่วนขยาย
+          และข้อมูลลงทะเบียนอุปกรณ์กับเซิร์ฟเวอร์ (ในโหมดเชื่อมต่อโดยตรง)
+        </p>
+
+        <h2>ผู้รับข้อมูลและการใช้ข้อมูล</h2>
+        <p>
+          ข้อมูลส่งไปยังเซิร์ฟเวอร์ AI Control ขององค์กรเท่านั้น (ผ่านโปรแกรม agent ขององค์กรบนเครื่อง
+          หรือโดยตรงทาง HTTPS) ใช้เพื่อบังคับนโยบายและให้ผู้ดูแลระบบตรวจสอบการเข้าถึงบริการ AI
+          เท่านั้น <strong>ไม่ขาย ไม่แบ่งปันกับบุคคลที่สาม ไม่ใช้โฆษณา ไม่ใช้สร้างโปรไฟล์
+          ไม่ใช้พิจารณาสินเชื่อ และไม่ใช้เพื่อวัตถุประสงค์อื่น</strong>
+          ส่วนขยายไม่มีการวิเคราะห์การใช้งานหรือบริการติดตามของบุคคลที่สาม
+        </p>
+
+        <h2>ความปลอดภัย</h2>
+        <p>
+          การสื่อสารกับเซิร์ฟเวอร์ใช้ HTTPS (หรือการเชื่อมต่อภายในเครื่องกับ agent)
+          นโยบายที่ส่งมาถูกลงลายมือชื่อดิจิทัล และ agent ขององค์กร (หรือส่วนขยายเอง ในโหมดเชื่อมต่อโดยตรง)
+          ตรวจสอบก่อนใช้ นโยบายที่ลายมือชื่อไม่ถูกต้องจะถูกปฏิเสธ
+        </p>
+
+        <h2>ระยะเวลาเก็บรักษาและสิทธิของผู้ใช้</h2>
+        <p>
+          ระยะเวลาเก็บรักษาข้อมูลบนเซิร์ฟเวอร์เป็นไปตามนโยบายขององค์กร
+          หากต้องการสอบถาม ขอเข้าถึง แก้ไข หรือลบข้อมูล หรือใช้สิทธิอื่นตามกฎหมายคุ้มครองข้อมูลส่วนบุคคล
+          กรุณาติดต่อฝ่ายโครงสร้างเทคโนโลยีสารสนเทศขององค์กร
+          <span class="todo">&lt;อีเมลติดต่อ&gt;</span>
+        </p>
+
+        <h2>การเปลี่ยนแปลงนโยบาย</h2>
+        <p>หากมีการเปลี่ยนแปลงข้อมูลที่ส่งออก จะปรับหน้านี้และวันที่มีผลบังคับใช้ก่อนปล่อยเวอร์ชันที่เปลี่ยน</p>
+      </section>
+
+      <section id="en" lang="en">
+        <h2>Privacy Policy</h2>
+        <p>
+          AI Control is an extension for organization-managed devices. It enforces the AI usage policy of
+          <span class="todo">&lt;Organization name&gt;</span> (the “Organization”): it blocks the AI services
+          the administrator restricts and tells the Organization which AI services were accessed.
+          The Organization is the data controller. The extension’s developer receives no data.
+        </p>
+
+        <h2>Data that leaves the browser</h2>
+        <table>
+          <tr><th>Host names of websites (for example chatgpt.com)</th><td>When the user opens a page of an AI service the Organization watches, or a site whose name looks like an AI service, the extension sends only the <strong>host name</strong>, the time, whether it was blocked and the service name. It never sends the full URL, path, query, page title or page content, and at most once per host per minute.</td></tr>
+          <tr><th>Account e-mail</th><td>Only in direct-connection mode (no organization agent on the device): the e-mail set by the administrator, or the e-mail of the signed-in browser profile (Chrome), so the server knows whose policy applies.</td></tr>
+          <tr><th>Device identifier</th><td>A random identifier created when the extension first registers with the Organization’s server, and the extension version, used to authenticate the extension to that server.</td></tr>
+        </table>
+
+        <h2>Data that is not collected</h2>
+        <p>
+          The extension does not read page content, has no content scripts, and does not collect what you type,
+          form data, passwords, cookies, general browsing history, or sites unrelated to AI services (those are
+          compared with the list on the device and never sent).
+        </p>
+
+        <h2>Data stored on the device</h2>
+        <p>
+          Stored only in the browser’s extension storage on this device (not synced): the domain lists set by the
+          Organization, the block page text, the status shown in the extension popup and, in direct-connection
+          mode, the device’s registration with the server.
+        </p>
+
+        <h2>Recipients and use</h2>
+        <p>
+          Data goes only to the Organization’s own AI Control server (through the Organization’s agent on the
+          device, or directly over HTTPS). It is used only to enforce the policy and to let administrators review
+          access to AI services. <strong>It is not sold, not shared with third parties, not used for advertising,
+          profiling or credit decisions, and not used for any other purpose.</strong>
+          The extension contains no analytics and no third-party trackers.
+        </p>
+
+        <h2>Security</h2>
+        <p>
+          Communication with the server uses HTTPS (or a local connection to the agent). Policies are digitally
+          signed and the Organization’s agent (or the extension itself in direct-connection mode) verifies the
+          signature before applying them; a policy with an invalid signature is rejected.
+        </p>
+
+        <h2>Retention and your rights</h2>
+        <p>
+          How long data is kept on the server is set by the Organization’s own policy. To ask questions, or to
+          request access, correction or deletion of data or exercise other rights under data-protection law,
+          contact the Organization’s IT Infrastructure Department
+          <span class="todo">&lt;contact e-mail&gt;</span>.
+        </p>
+
+        <h2>Changes</h2>
+        <p>If the data that leaves the browser changes, this page and its effective date are updated before the changed version is released.</p>
+      </section>
+    </main>
+  </body>
+</html>
