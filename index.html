@@ -46,7 +46,7 @@
   <body>
     <main>
       <h1>AI Control</h1>
-      <p class="muted">ส่วนขยายเบราว์เซอร์ / Browser extension · มีผลตั้งแต่ / Effective 3 October 2026</p>
+      <p class="muted">ส่วนขยายเบราว์เซอร์ / Browser extension · มีผลตั้งแต่ / Effective 7 October 2026 (0.5.9)</p>
       <nav><a href="#th">ภาษาไทย</a><a href="#en">English</a></nav>
 
       <section id="th" lang="th">
@@ -54,35 +54,48 @@
         <p>
           AI Control เป็นส่วนขยายสำหรับอุปกรณ์ขององค์กร ใช้บังคับนโยบายการใช้งาน AI ขององค์กร
           OCEAN LIFE Insurance (“องค์กร”) โดยบล็อกบริการ AI ที่ผู้ดูแลระบบกำหนด
+          ตรวจว่าใช้บัญชีองค์กรหรือไม่ ตรวจข้อมูลอ่อนไหวในข้อความที่ส่งไปยังบริการ AI
           และแจ้งให้องค์กรทราบว่ามีการเข้าถึงบริการ AI ใดบ้าง องค์กรเป็นผู้ควบคุมข้อมูล
-          ผู้พัฒนาส่วนขยายไม่ได้รับข้อมูลใดๆ
+          ผู้พัฒนาส่วนขยายไม่ได้รับข้อมูลใดๆ พนักงานได้รับแจ้งจากองค์กรล่วงหน้าเกี่ยวกับการทำงานนี้
         </p>
 
         <h2>ข้อมูลที่ส่งออกจากเบราว์เซอร์</h2>
         <table>
-          <tr><th>ชื่อโฮสต์ของเว็บไซต์ (เช่น chatgpt.com)</th><td>เมื่อผู้ใช้เปิดหน้าเว็บของบริการ AI ที่องค์กรเฝ้าดู หรือเว็บที่ชื่อดูเหมือนบริการ AI ส่งเฉพาะ <strong>ชื่อโฮสต์</strong> พร้อมเวลา ว่าถูกบล็อกหรือไม่ และชื่อบริการ ไม่ส่ง URL เต็ม เส้นทาง พารามิเตอร์ ชื่อหน้า หรือเนื้อหาหน้า ส่งไม่เกินหนึ่งครั้งต่อโฮสต์ต่อหนึ่งนาที</td></tr>
-          <tr><th>อีเมลของบัญชี</th><td>เฉพาะเมื่อใช้งานแบบเชื่อมต่อเซิร์ฟเวอร์โดยตรง (ไม่มีโปรแกรม agent ขององค์กรบนเครื่อง) ส่วนขยายส่งอีเมลที่ผู้ดูแลระบบตั้งค่าไว้ หรืออีเมลของบัญชีเบราว์เซอร์ที่ลงชื่อเข้าใช้ (Chrome) เพื่อให้ทราบว่าต้องใช้นโยบายของผู้ใช้คนใด</td></tr>
+          <tr><th>ชื่อโฮสต์ของเว็บไซต์ (เช่น chatgpt.com)</th><td>เมื่อผู้ใช้เปิดหน้าเว็บของบริการ AI ที่องค์กรเฝ้าดู หรือเว็บที่ชื่อดูเหมือนบริการ AI ส่ง<strong>ชื่อโฮสต์</strong> พร้อมเวลา ว่าถูกบล็อกหรือไม่ และชื่อบริการ ไม่ส่ง URL เต็ม พารามิเตอร์ หรือชื่อหน้า ส่งไม่เกินหนึ่งครั้งต่อโฮสต์ต่อหนึ่งนาที</td></tr>
+          <tr><th>ข้อความที่ส่งไปยังบริการ AI (prompt)</th><td>เฉพาะบนเว็บ AI ที่องค์กรกำหนด (ChatGPT, Claude, Gemini) และเฉพาะกลุ่มผู้ใช้ที่องค์กรเปิดฟีเจอร์นี้ ส่วนขยายอ่านข้อความที่ผู้ใช้ส่งไปยังบริการ AI <strong>ลบรหัสผ่าน คีย์ และความลับที่ตรวจพบ</strong>ในเบราว์เซอร์ก่อน ตัดให้ไม่เกิน 100,000 ตัวอักษร แล้วส่งไปยังเซิร์ฟเวอร์ขององค์กร พร้อมเวลา ชื่อบริการ และรหัสการสนทนา (จากรหัสแชตในที่อยู่หน้าเว็บ) เพื่อจัดข้อความเป็นบทสนทนา ไม่อ่านคำตอบของ AI และไม่อ่านไฟล์แนบ</td></tr>
+          <tr><th>ผลตรวจข้อมูลอ่อนไหว</th><td>ส่วนขยายตรวจในเครื่องว่าข้อความมีข้อมูลอ่อนไหว (เช่น เลขบัตรประชาชน เลขบัตรเครดิต คีย์ลับ หรือคำที่องค์กรกำหนด) ส่งเฉพาะ<strong>ชนิดของข้อมูลที่พบ</strong>ให้โปรแกรม agent ขององค์กร ตามที่องค์กรตั้งค่า (ปิด / รายงาน / บล็อก)</td></tr>
+          <tr><th>อีเมลของบัญชีบนเว็บ AI</th><td>เมื่อองค์กรเปิดการตรวจบัญชี ส่วนขยายอ่านอีเมลของบัญชีที่ลงชื่อเข้าใช้บนเว็บ AI และส่งให้ agent ขององค์กรบนเครื่องเพื่อตัดสินว่าเป็นบัญชีองค์กรหรือบัญชีส่วนตัว</td></tr>
+          <tr><th>อีเมลของผู้ใช้เครื่อง</th><td>เฉพาะเมื่อใช้งานแบบเชื่อมต่อเซิร์ฟเวอร์โดยตรง (ไม่มีโปรแกรม agent ขององค์กรบนเครื่อง) ส่วนขยายส่งอีเมลที่ผู้ดูแลระบบตั้งค่าไว้ หรืออีเมลของบัญชีเบราว์เซอร์ที่ลงชื่อเข้าใช้ (Chrome) เพื่อให้ทราบว่าต้องใช้นโยบายของผู้ใช้คนใด</td></tr>
           <tr><th>รหัสอุปกรณ์</th><td>รหัสสุ่มที่สร้างตอนลงทะเบียนครั้งแรกกับเซิร์ฟเวอร์ขององค์กร และเวอร์ชันของส่วนขยาย เพื่อใช้ยืนยันตัวตนของส่วนขยายกับเซิร์ฟเวอร์</td></tr>
         </table>
 
+        <h2>การใช้คุกกี้</h2>
+        <p>
+          ส่วนขยายไม่ส่งคุกกี้ออกจากเครื่อง และไม่นำค่าของคุกกี้ไปใช้
+          สิทธิ์ <code>cookies</code> ใช้เพียงอย่างเดียวคือ <strong>ลบคุกกี้ของเว็บ AI</strong> เพื่อออกจากระบบบัญชีส่วนตัว
+          เมื่อองค์กรตั้งโหมดบล็อกบัญชีส่วนตัวและตรวจพบว่าไม่ใช่บัญชีองค์กร
+        </p>
+
         <h2>ข้อมูลที่ไม่เก็บ</h2>
         <p>
-          ส่วนขยายไม่อ่านเนื้อหาหน้าเว็บ ไม่มี content script ไม่เก็บสิ่งที่ผู้ใช้พิมพ์
-          ข้อมูลในแบบฟอร์ม รหัสผ่าน คุกกี้ ประวัติการท่องเว็บทั่วไป หรือเว็บที่ไม่เกี่ยวกับบริการ AI
+          ส่วนขยายไม่เก็บสิ่งที่ผู้ใช้พิมพ์บนเว็บอื่นนอกเหนือจากเว็บ AI ที่องค์กรกำหนด ไม่เก็บข้อมูลในแบบฟอร์ม
+          รหัสผ่าน ประวัติการท่องเว็บทั่วไป หรือเว็บที่ไม่เกี่ยวกับบริการ AI
           (เว็บเหล่านั้นถูกตรวจในเครื่องเพื่อเทียบกับรายการ และไม่ถูกส่งออก)
+          content script ทำงานเฉพาะบน chatgpt.com, claude.ai และ gemini.google.com
         </p>
 
         <h2>ข้อมูลที่เก็บในเครื่อง</h2>
         <p>
           ส่วนขยายเก็บในพื้นที่เก็บข้อมูลของเบราว์เซอร์บนเครื่องนี้เท่านั้น (ไม่ซิงก์ไปเครื่องอื่น):
           รายการโดเมนที่องค์กรกำหนด ข้อความหน้าบล็อก สถานะที่แสดงในหน้าต่างเล็กของส่วนขยาย
+          ผลการตรวจบัญชีล่าสุด (เหตุผลและเวลา ไม่มีอีเมล)
           และข้อมูลลงทะเบียนอุปกรณ์กับเซิร์ฟเวอร์ (ในโหมดเชื่อมต่อโดยตรง)
         </p>
 
         <h2>ผู้รับข้อมูลและการใช้ข้อมูล</h2>
         <p>
           ข้อมูลส่งไปยังเซิร์ฟเวอร์ AI Control ขององค์กรเท่านั้น (ผ่านโปรแกรม agent ขององค์กรบนเครื่อง
-          หรือโดยตรงทาง HTTPS) ใช้เพื่อบังคับนโยบายและให้ผู้ดูแลระบบตรวจสอบการเข้าถึงบริการ AI
+          หรือโดยตรงทาง HTTPS) ใช้เพื่อบังคับนโยบาย ป้องกันข้อมูลรั่วไหล และให้ผู้ดูแลระบบตรวจสอบการใช้บริการ AI
           เท่านั้น <strong>ไม่ขาย ไม่แบ่งปันกับบุคคลที่สาม ไม่ใช้โฆษณา ไม่ใช้สร้างโปรไฟล์
           ไม่ใช้พิจารณาสินเชื่อ และไม่ใช้เพื่อวัตถุประสงค์อื่น</strong>
           ส่วนขยายไม่มีการวิเคราะห์การใช้งานหรือบริการติดตามของบุคคลที่สาม
@@ -91,13 +104,15 @@
         <h2>ความปลอดภัย</h2>
         <p>
           การสื่อสารกับเซิร์ฟเวอร์ใช้ HTTPS (หรือการเชื่อมต่อภายในเครื่องกับ agent)
+          ข้อความ prompt ที่เก็บถูกเข้ารหัสในฐานข้อมูลขององค์กร และเปิดอ่านได้เฉพาะผู้ดูแลระบบและผู้ตรวจสอบ
+          (Admin / Auditor) โดยทุกครั้งที่เปิดอ่านจะถูกบันทึกในบันทึกการตรวจสอบ
           นโยบายที่ส่งมาถูกลงลายมือชื่อดิจิทัล และ agent ขององค์กร (หรือส่วนขยายเอง ในโหมดเชื่อมต่อโดยตรง)
           ตรวจสอบก่อนใช้ นโยบายที่ลายมือชื่อไม่ถูกต้องจะถูกปฏิเสธ
         </p>
 
         <h2>ระยะเวลาเก็บรักษาและสิทธิของผู้ใช้</h2>
         <p>
-          ระยะเวลาเก็บรักษาข้อมูลบนเซิร์ฟเวอร์เป็นไปตามนโยบายขององค์กร
+          ข้อความ prompt ถูกเก็บ <strong>90 วัน</strong> แล้วลบ ข้อมูลอื่นเก็บตามนโยบายขององค์กร
           หากต้องการสอบถาม ขอเข้าถึง แก้ไข หรือลบข้อมูล หรือใช้สิทธิอื่นตามกฎหมายคุ้มครองข้อมูลส่วนบุคคล
           กรุณาติดต่อฝ่ายโครงสร้างเทคโนโลยีสารสนเทศขององค์กร
           <a href="mailto:saran.kaewnang@gmail.com">saran.kaewnang@gmail.com</a>
@@ -111,54 +126,71 @@
         <h2>Privacy Policy</h2>
         <p>
           AI Control is an extension for organization-managed devices. It enforces the AI usage policy of
-          OCEAN LIFE Insurance (the “Organization”): it blocks the AI services
-          the administrator restricts and tells the Organization which AI services were accessed.
-          The Organization is the data controller. The extension’s developer receives no data.
+          OCEAN LIFE Insurance (the “Organization”): it blocks the AI services the administrator restricts,
+          checks whether a company account is used, checks for sensitive data in text sent to AI services,
+          and tells the Organization which AI services were accessed. The Organization is the data
+          controller. The extension’s developer receives no data. Employees are informed by the Organization
+          in advance.
         </p>
 
         <h2>Data that leaves the browser</h2>
         <table>
-          <tr><th>Host names of websites (for example chatgpt.com)</th><td>When the user opens a page of an AI service the Organization watches, or a site whose name looks like an AI service, the extension sends only the <strong>host name</strong>, the time, whether it was blocked and the service name. It never sends the full URL, path, query, page title or page content, and at most once per host per minute.</td></tr>
-          <tr><th>Account e-mail</th><td>Only in direct-connection mode (no organization agent on the device): the e-mail set by the administrator, or the e-mail of the signed-in browser profile (Chrome), so the server knows whose policy applies.</td></tr>
+          <tr><th>Host names of websites (for example chatgpt.com)</th><td>When the user opens a page of an AI service the Organization watches, or a site whose name looks like an AI service, the extension sends the <strong>host name</strong>, the time, whether it was blocked and the service name. It never sends the full URL, query or page title, and at most once per host per minute.</td></tr>
+          <tr><th>Text sent to AI services (prompts)</th><td>Only on the AI sites the Organization lists (ChatGPT, Claude, Gemini) and only for user groups for which the Organization turned this on. The extension reads the text the user submits to the AI service, <strong>blanks passwords, keys and other secrets it detects</strong> in the browser first, clips it to 100,000 characters and sends it to the Organization’s server with the time, service name and a conversation id (taken from the chat id in the page address) so messages can be grouped into conversations. It does not read the AI’s replies or attached files.</td></tr>
+          <tr><th>Sensitive-data findings</th><td>The extension checks on the device whether the text contains sensitive data (for example national ID or card numbers, secret keys, or terms the Organization defined). It sends only the <strong>kinds of data found</strong> to the Organization’s agent, as the Organization configured (off / report / block).</td></tr>
+          <tr><th>E-mail of the account signed in on the AI site</th><td>When the Organization turns the account check on, the extension reads the e-mail of the account signed in on the AI site and sends it to the Organization’s agent on the device to decide whether it is a company or a personal account.</td></tr>
+          <tr><th>Device user e-mail</th><td>Only in direct-connection mode (no organization agent on the device): the e-mail set by the administrator, or the e-mail of the signed-in browser profile (Chrome), so the server knows whose policy applies.</td></tr>
           <tr><th>Device identifier</th><td>A random identifier created when the extension first registers with the Organization’s server, and the extension version, used to authenticate the extension to that server.</td></tr>
         </table>
 
+        <h2>Use of cookies</h2>
+        <p>
+          The extension does not send cookies off the device and does not use cookie values. The
+          <code>cookies</code> permission has one use: to <strong>delete the AI site’s cookies</strong> so a personal
+          account is signed out, when the Organization sets personal accounts to be blocked and a non-company
+          account is detected.
+        </p>
+
         <h2>Data that is not collected</h2>
         <p>
-          The extension does not read page content, has no content scripts, and does not collect what you type,
-          form data, passwords, cookies, general browsing history, or sites unrelated to AI services (those are
-          compared with the list on the device and never sent).
+          The extension does not collect what you type on sites other than the AI sites the Organization lists,
+          form data, passwords, general browsing history, or sites unrelated to AI services (those are compared
+          with the list on the device and never sent). Its content script runs only on chatgpt.com, claude.ai
+          and gemini.google.com.
         </p>
 
         <h2>Data stored on the device</h2>
         <p>
           Stored only in the browser’s extension storage on this device (not synced): the domain lists set by the
-          Organization, the block page text, the status shown in the extension popup and, in direct-connection
-          mode, the device’s registration with the server.
+          Organization, the block page text, the status shown in the extension popup, the result of the last
+          account check (reason and time, no e-mail) and, in direct-connection mode, the device’s registration
+          with the server.
         </p>
 
         <h2>Recipients and use</h2>
         <p>
           Data goes only to the Organization’s own AI Control server (through the Organization’s agent on the
-          device, or directly over HTTPS). It is used only to enforce the policy and to let administrators review
-          access to AI services. <strong>It is not sold, not shared with third parties, not used for advertising,
-          profiling or credit decisions, and not used for any other purpose.</strong>
+          device, or directly over HTTPS). It is used only to enforce the policy, prevent data leaks and let
+          administrators review the use of AI services. <strong>It is not sold, not shared with third parties,
+          not used for advertising, profiling or credit decisions, and not used for any other purpose.</strong>
           The extension contains no analytics and no third-party trackers.
         </p>
 
         <h2>Security</h2>
         <p>
-          Communication with the server uses HTTPS (or a local connection to the agent). Policies are digitally
-          signed and the Organization’s agent (or the extension itself in direct-connection mode) verifies the
-          signature before applying them; a policy with an invalid signature is rejected.
+          Communication with the server uses HTTPS (or a local connection to the agent). Stored prompt text is
+          encrypted in the Organization’s database and can be read only by administrators and auditors
+          (Admin / Auditor); every read is recorded in an audit log. Policies are digitally signed and the
+          Organization’s agent (or the extension itself in direct-connection mode) verifies the signature
+          before applying them; a policy with an invalid signature is rejected.
         </p>
 
         <h2>Retention and your rights</h2>
         <p>
-          How long data is kept on the server is set by the Organization’s own policy. To ask questions, or to
-          request access, correction or deletion of data or exercise other rights under data-protection law,
-          contact the Organization’s IT Infrastructure Department
-          <a href="mailto:saran.kaewnang@gmail.com">saran.kaewnang@gmail.com</a>.
+          Prompt text is kept for <strong>90 days</strong> and then deleted. Other data is kept as the
+          Organization’s policy sets. To ask questions, or to request access, correction or deletion of data or
+          exercise other rights under data-protection law, contact the Organization’s IT Infrastructure
+          Department <a href="mailto:saran.kaewnang@gmail.com">saran.kaewnang@gmail.com</a>.
         </p>
 
         <h2>Changes</h2>
